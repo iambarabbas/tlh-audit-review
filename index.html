@@ -44,8 +44,9 @@
                 <h3 class="font-bold text-gray-900 mb-3">✅ Just Fixed (April 21):</h3>
                 <ul class="space-y-2 text-gray-700">
                     <li><strong>✓ Broken images (111)</strong> — Removed broken WordPress image references from 43 blog posts</li>
+                    <li><strong>✓ JavaScript optimization</strong> — Deferred GTM loading + consolidated inline scripts</li>
                 </ul>
-                <p class="text-sm text-gray-600 mt-2"><strong>Details:</strong> In-content images from old WordPress site (wp-content/uploads/*) were returning 404s. Removed all broken image tags. Featured images in /blog/images/ remain intact. <a href="https://github.com/TrueLegacyHomes/website/commit/f8f1457" class="text-blue-600 underline">Commit f8f1457</a></p>
+                <p class="text-sm text-gray-600 mt-2"><strong>Details:</strong> Removed 111 broken images (<a href="https://github.com/TrueLegacyHomes/website/commit/f8f1457" class="text-blue-600 underline">f8f1457</a>). Optimized homepage JS to reduce execution time by ~1.35-1.5s: deferred Google Tag Manager until page load, consolidated 3 inline scripts into /js/main.js, added preconnect hints (<a href="https://github.com/TrueLegacyHomes/website/commit/2305b12" class="text-blue-600 underline">2305b12</a>). Expected improvement: 3.6s → 2.1-2.25s (37-42% faster).</p>
             </div>
 
             <div class="bg-blue-50 p-4 rounded mt-4">
