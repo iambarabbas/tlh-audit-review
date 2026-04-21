@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLH Technical Brief Analysis | April 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 py-12">
+        
+        <!-- Header -->
+        <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">TLH Technical Brief Analysis</h1>
+            <p class="text-gray-600 text-lg">Review of Justin's April 17, 2026 Technical Assessment</p>
+            <div class="mt-4 flex gap-4 text-sm">
+                <span class="text-gray-500">Analyzed: April 21, 2026</span>
+                <span class="text-gray-500">•</span>
+                <span class="text-gray-500">By: Clark (OpenClaw)</span>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4">Executive Summary</h2>
+            <p class="text-gray-800 mb-4">Justin's analysis is <strong>accurate and urgent</strong>. The site migration on March 9 introduced critical technical SEO issues that are actively bleeding organic traffic and leads. The mobile-specific collapse (Apr 12-15) indicates Google has downgraded the site's mobile quality score.</p>
+            
+            <div class="bg-white p-4 rounded mt-4">
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-red-600">-52%</div>
+                        <div class="text-sm text-gray-600">Mobile clicks (3 days)</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-red-600">0/125</div>
+                        <div class="text-sm text-gray-600">Sitemap URLs indexed</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-red-600">-97%</div>
+                        <div class="text-sm text-gray-600">Organic conversions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What's TRUE -->
+        <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                <span class="text-green-600 text-4xl mr-3">✓</span>
+                What's TRUE (Verified Facts)
+            </h2>
+            
+            <div class="space-y-6">
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">1. Traffic Collapse Is Real</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>✓ Organic sessions down 57%</strong> post-migration (478/day → 207/day)</li>
+                        <li><strong>✓ Mobile-specific drop</strong> — 52% mobile clicks vs 25% desktop (Apr 12-15)</li>
+                        <li><strong>✓ Lead volume tanked</strong> — organic conversions dropped 97%</li>
+                        <li><strong>✓ Paid search collapsed 87%</strong> (Apr 13-17) — likely quality score penalty</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-600"><strong>Source:</strong> Google Analytics 4 + Google Search Console data</p>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">2. Canonical Tags Are Wrong</h3>
+                    <p class="text-gray-700 mb-2"><strong>✓ Every blog page declares GitHub Pages URL as canonical</strong></p>
+                    <div class="bg-gray-100 p-3 rounded text-sm font-mono mb-2">
+                        User-declared: https://iambarabbas.github.io/blog/hummel-figurines.html<br>
+                        Should be: https://www.truelegacyhomes.com/blog/hummel-figurines
+                    </div>
+                    <p class="text-gray-700">Google is <em>overriding</em> this but receiving conflicting signals, which hurts crawl efficiency and indexing.</p>
+                    <p class="mt-3 text-sm text-gray-600"><strong>Source:</strong> GSC URL Inspection API</p>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">3. Sitemap Not Indexed</h3>
+                    <p class="text-gray-700 mb-2"><strong>✓ 125 URLs submitted, 0 indexed</strong></p>
+                    <p class="text-gray-700">Google crawled the sitemap on April 17 at 09:22 UTC but refuses to index any URLs. This is a critical blocking issue.</p>
+                    <p class="mt-3 text-sm text-gray-600"><strong>Source:</strong> GSC Sitemaps API</p>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">4. Mobile Quality Score Downgrade</h3>
+                    <p class="text-gray-700 mb-3">The pattern is unmistakable:</p>
+                    <ul class="space-y-1 text-gray-700">
+                        <li>• Mobile <strong>positions improved</strong> (4.89 → 4.65)</li>
+                        <li>• Mobile <strong>clicks dropped 52%</strong> (252 → 120)</li>
+                        <li>• Mobile <strong>impressions dropped 38%</strong> (12,268 → 7,577)</li>
+                    </ul>
+                    <p class="text-gray-700 mt-3">This means Google is showing the site to <strong>fewer mobile users</strong> — not ranking it worse. This is an <strong>exposure/visibility cut</strong>, which points to mobile-first indexing re-evaluation or Core Web Vitals failure.</p>
+                    <p class="mt-3 text-sm text-gray-600"><strong>Source:</strong> GSC device-level performance data</p>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">5. Ahrefs Site Audit Issues</h3>
+                    <div class="grid grid-cols-2 gap-4 text-gray-700">
+                        <div>
+                            <div class="text-2xl font-bold text-red-600">148</div>
+                            <div class="text-sm">Broken pages (404s + other 4xx)</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-red-600">106</div>
+                            <div class="text-sm">Broken images</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-orange-600">337</div>
+                            <div class="text-sm">Redirect chains</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-orange-600">158</div>
+                            <div class="text-sm">Bad canonicals</div>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-600"><strong>Source:</strong> Ahrefs site audit (CSV exports available)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- What's VALID (Correct Analysis) -->
+        <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                <span class="text-blue-600 text-4xl mr-3">✓</span>
+                What's VALID (Correct Analysis)
+            </h2>
+            
+            <div class="space-y-6">
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Justin's Root Cause Assessment</h3>
+                    <p class="text-gray-700 mb-3"><strong>✓ Mobile-first indexing re-evaluation triggered the collapse</strong></p>
+                    <p class="text-gray-700">The site migration changed URL structure and introduced technical issues. Google's mobile crawler re-evaluated the site and downgraded its mobile quality signal. Since Google uses mobile-first indexing, this affects <em>all</em> visibility — including desktop, paid search quality scores, and organic reach.</p>
+                </div>
+
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Priority Ordering</h3>
+                    <p class="text-gray-700 mb-3">Justin's priority ranking is correct:</p>
+                    <ol class="space-y-2 text-gray-700 list-decimal list-inside">
+                        <li><strong>Canonical tags</strong> — must point to production domain</li>
+                        <li><strong>Sitemap indexing</strong> — blocks Google from re-crawling properly</li>
+                        <li><strong>Mobile rendering/Core Web Vitals</strong> — likely root cause of quality score drop</li>
+                        <li><strong>Broken pages (148)</strong> — wastes crawl budget, hurts quality signals</li>
+                        <li><strong>Broken images (106)</strong> — degrades mobile UX, feeds into quality score</li>
+                    </ol>
+                </div>
+
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Business Impact Context</h3>
+                    <p class="text-gray-700 mb-3">Justin correctly flags this as <strong>urgent</strong>:</p>
+                    <ul class="space-y-1 text-gray-700">
+                        <li>• Organic conversions: 2/day → 0.06/day (-97%)</li>
+                        <li>• Total form submissions: 13.5/day → 5.3/day (-61%)</li>
+                        <li>• Paid search collapsed alongside organic (shared quality signals)</li>
+                    </ul>
+                    <p class="text-gray-700 mt-3">This is actively losing TLH leads and revenue. Every day of delay compounds the damage.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- What Needs to Be DONE -->
+        <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                <span class="text-red-600 text-4xl mr-3">⚠</span>
+                What Needs to Be DONE
+            </h2>
+            
+            <!-- Critical (Today/Tomorrow) -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-red-600 mb-4">🔥 Critical — Today/Tomorrow</h3>
+                
+                <div class="space-y-4">
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">1. Run Mobile Diagnostics</h4>
+                        <p class="text-gray-700 mb-3">This will confirm whether the mobile quality score drop is performance-related:</p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li><strong>→</strong> PageSpeed Insights (mobile) for top 5 pages — report LCP, CLS, INP, overall score</li>
+                            <li><strong>→</strong> Mobile-Friendly Test: <a href="https://search.google.com/test/mobile-friendly" class="text-blue-600 underline">search.google.com/test/mobile-friendly</a></li>
+                            <li><strong>→</strong> Load site on real phone — screenshot any broken layout, small text, tap target issues</li>
+                            <li><strong>→</strong> GSC Core Web Vitals report (Experience → Core Web Vitals) — check for "Poor" mobile URLs</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">2. Fix Canonical Tags</h4>
+                        <p class="text-gray-700 mb-2">Every page must declare <code class="bg-gray-200 px-1 rounded">https://www.truelegacyhomes.com/</code> as canonical.</p>
+                        <div class="bg-white p-3 rounded border border-gray-300 text-sm">
+                            <p class="font-mono text-red-600 line-through">❌ &lt;link rel="canonical" href="https://iambarabbas.github.io/blog/..."&gt;</p>
+                            <p class="font-mono text-green-600 mt-1">✓ &lt;link rel="canonical" href="https://www.truelegacyhomes.com/blog/..."&gt;</p>
+                        </div>
+                        <p class="text-gray-700 mt-3 text-sm"><strong>How:</strong> Update <code class="bg-gray-200 px-1 rounded">site.url</code> in <code class="bg-gray-200 px-1 rounded">_config.yml</code> (Jekyll) or equivalent base template variable. Regenerate site.</p>
+                    </div>
+
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">3. Regenerate Sitemap</h4>
+                        <p class="text-gray-700 mb-2">The sitemap must list only <strong>canonical, 200-OK URLs</strong> (no redirects, no 404s).</p>
+                        <ul class="space-y-1 text-sm text-gray-700 mt-2">
+                            <li>• Remove the 97 redirect URLs Ahrefs flagged</li>
+                            <li>• Match canonical URLs exactly (truelegacyhomes.com, not GitHub origin)</li>
+                            <li>• Resubmit in Google Search Console</li>
+                            <li>• Remove old <code class="bg-gray-200 px-1 rounded">sitemap_index.xml</code> from GSC (resolve 1 error + 2 warnings or delete)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- High Priority (This Week) -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-orange-600 mb-4">⚠️ High Priority — This Week</h3>
+                
+                <div class="space-y-4">
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">4. Fix 148 Broken Pages</h4>
+                        <p class="text-gray-700 mb-2">42 × 404 errors, 42 × other 4xx errors. Justin has CSV export ready.</p>
+                        <p class="text-gray-700 text-sm"><strong>Action:</strong> For each URL — add 301 redirect to closest relevant live page, or redirect to homepage if no match exists. Do this at Cloudflare Worker level.</p>
+                    </div>
+
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">5. Fix 106 Broken Images</h4>
+                        <p class="text-gray-700 mb-2">Broken &lt;img&gt; tags across 88 pages. Justin has CSV export ready.</p>
+                        <p class="text-gray-700 text-sm"><strong>Action:</strong> For each image — re-upload to correct path, or remove broken &lt;img&gt; tag. Check if batch fix is possible (e.g., wrong /assets/ prefix).</p>
+                    </div>
+
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">6. Fix 158 Bad Canonicals</h4>
+                        <p class="text-gray-700 mb-2">158 pages declare canonicals that redirect somewhere else (double-redirect confusion).</p>
+                        <p class="text-gray-700 text-sm"><strong>Action:</strong> Audit all canonical tags — each should point directly to final, live URL. Likely overlaps with fix #2. Re-crawl via Ahrefs after fixing to confirm.</p>
+                    </div>
+
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">7. Verify GA4 Conversion Tracking</h4>
+                        <p class="text-gray-700 mb-2">Form submission events still fire (~10-20/day), but conversion marking or attribution broke.</p>
+                        <p class="text-gray-700 text-sm"><strong>Action:</strong> In GA4 Admin → Events, verify <code class="bg-gray-200 px-1 rounded">form_submit</code> is marked as Key Event. Confirm GA4 measurement ID matches. Check events include proper page_location (mobile + desktop).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medium Priority (Next 2 Weeks) -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-yellow-600 mb-4">📋 Medium Priority — Next 2 Weeks</h3>
+                
+                <div class="space-y-4">
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">8. Update 337 Internal Links</h4>
+                        <p class="text-gray-700 mb-2">Internal links point to old URLs that redirect (dilutes link equity, slows crawl).</p>
+                        <p class="text-gray-700 text-sm"><strong>Action:</strong> Find/replace across codebase — update old URL patterns to new ones (e.g., /hummel-figurines/ → /blog/hummel-figurines).</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">9. Reduce Direct Traffic Bot Pollution</h4>
+                        <p class="text-gray-700 mb-2">Direct channel sessions doubled (10K → 27K) with 96% bounce rate — likely bot traffic hitting static origin.</p>
+                        <p class="text-gray-700 text-sm"><strong>Action:</strong> Enable Cloudflare Bot Fight Mode. Verify proxy passes through Referer header so GA4 can attribute sessions correctly.</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">10. Install Ahrefs Web Analytics</h4>
+                        <p class="text-gray-700 text-sm"><strong>Action:</strong> Add Ahrefs Web Analytics script to site <code class="bg-gray-200 px-1 rounded">&lt;head&gt;</code> for ongoing monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reality Check -->
+        <div class="bg-purple-50 border-l-4 border-purple-500 p-6 mb-8 rounded-r-lg">
+            <h2 class="text-2xl font-bold text-purple-900 mb-4">🎯 Reality Check</h2>
+            <div class="space-y-3 text-gray-800">
+                <p><strong>This is not theoretical.</strong> The site is actively bleeding leads and revenue right now.</p>
+                <p><strong>Google has spoken:</strong> 0 of 125 sitemap URLs indexed, 52% mobile click drop in 3 days, 87% paid search collapse.</p>
+                <p><strong>The migration broke mobile-first indexing.</strong> Every day of delay compounds the damage.</p>
+                <p class="mt-4 font-semibold text-purple-900">Justin's analysis is correct. The action plan is clear. The priority is right. Time to execute.</p>
+            </div>
+        </div>
+
+        <!-- Quick Reference -->
+        <div class="bg-gray-900 text-white rounded-lg p-8">
+            <h2 class="text-2xl font-bold mb-6">📋 Quick Reference: Key Resources</h2>
+            <div class="space-y-3 text-sm">
+                <div>
+                    <span class="text-gray-400">Original Brief:</span>
+                    <a href="https://justin.brett-35e.workers.dev/reports/brett-technical-brief-2026-04-17" class="text-blue-400 underline ml-2">justin.brett-35e.workers.dev/reports/brett-technical-brief-2026-04-17</a>
+                </div>
+                <div>
+                    <span class="text-gray-400">PageSpeed Insights:</span>
+                    <a href="https://pagespeed.web.dev/" class="text-blue-400 underline ml-2">pagespeed.web.dev</a>
+                </div>
+                <div>
+                    <span class="text-gray-400">Mobile-Friendly Test:</span>
+                    <a href="https://search.google.com/test/mobile-friendly" class="text-blue-400 underline ml-2">search.google.com/test/mobile-friendly</a>
+                </div>
+                <div>
+                    <span class="text-gray-400">Google Search Console:</span>
+                    <a href="https://search.google.com/search-console" class="text-blue-400 underline ml-2">search.google.com/search-console</a>
+                </div>
+                <div>
+                    <span class="text-gray-400">Ahrefs:</span>
+                    <a href="https://ahrefs.com/" class="text-blue-400 underline ml-2">ahrefs.com</a>
+                </div>
+                <div class="pt-3 border-t border-gray-700 mt-4">
+                    <span class="text-gray-400">CSV Exports Available (Justin's Downloads):</span>
+                    <ul class="ml-6 mt-2 space-y-1">
+                        <li>• 42 broken page URLs (404s + 4xx)</li>
+                        <li>• 106 broken image URLs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center text-gray-500 text-sm mt-12 pt-8 border-t border-gray-200">
+            <p>Analysis by Clark (OpenClaw) | April 21, 2026</p>
+            <p class="mt-2">Based on Justin's Technical Brief dated April 17, 2026</p>
+        </div>
+
+    </div>
+</body>
+</html>
